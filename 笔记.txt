@@ -1,0 +1,129 @@
+HTTP
+---------------------
+fs
+fs.writeFile()
+fs.readFile()
+---------------------
+
+服务器
+ 静态资源访问
+ 数据交互
+ 数据库
+----------------------
+数据交互
+HTTP协议 
+
+HTTP 1.0 RFC-1945
+HTTP 1.1 RFC-2616 持久连接
+
+HTTPS    RFC-2818 安全协议
+HTTP 2.0 RFC-7540 加密、头部压缩、服务器推送、管线操作、多路复用
+
+----------------------
+http报文结构
+
+ —————————————
+ |           | header
+ |———————————|
+ |           |
+ |           | body
+ |___________|
+
+ 
+----------------------
+
+状态码
+1xx 信息
+2xx 成功
+3xx 重定向
+4xx 请求错误
+5xx 服务器错误
+
+----------------------
+
+请求方式：
+GET：获取数据
+    数据放在url上传输
+    容量小<= 32K
+POST：发送数据
+    容量大<=2G
+
+----------------------
+
+接收浏览器的 GET 数据 - url
+使用 url模块
+        url.parse(req.url, true) => {pathname, query}
+
+    req.url => "a/b?x=x&x=x"
+
+接收浏览器的 POST 数据 - body
+    不能转为字符串，避免里面存在文件
+    分几次接收
+    let arr = []
+    req.on('data), buffer => {})
+    req.on('end', () => {
+        let buffer = Buffer.concat(arr)
+        let post = queryString.parse(buffer)
+    })
+
+    POST => 'xx=xx&cc=ccc'
+    queryString.parse('xx')
+
+----------------------
+
+http原理
+fs.writeFile/readFile
+url.parse
+queryString.parse
+
+----------------------
+
+接口-API
+用户注册、登录
+
+服务器
+1.请求文件=> 结果
+2.请求接口=> 操作
+3.存储数据
+
+----------------------
+
+注册接口
+/reg?username=xxx&password=xxx
+
+=> {error: 0, msg: '为什么'}
+登录接口
+/login?username=xxx&password=xxx
+=> {error: 1, msg: ''}
+
+----------------------
+
+模块：
+1.系统
+2.第三方
+
+----------------------
+
+Node.js的模块系统
+1.定义模块
+    分类
+        CMD
+        AMD
+        ESM(Ecmascript6)
+    语法
+        module  => 批量导出
+            module.exports = fn
+            module.exports = {
+                a:'a'
+            }
+        exports => 单一导出
+            exports.a = 'a'
+        require
+            require:
+                1.如果带路径则去路径下寻找
+                2.如果没有
+                    1.node_modules
+                    2.系统下的node_modules
+
+        
+
