@@ -1,0 +1,63 @@
+package.json
+
+npm/cnpm
+yarn
+    npm i yarn -g
+    yarn add xxx
+    yarn remove xxx
+bower - 前端包管理
+    npm i bower -g
+    bower i jquery
+
+----------------------
+
+系统包：
+    1.assert-断言
+    2.path-路径
+    3.fs - 文件操作
+    4.url - 网址
+    5.querystring - 请求数据
+    6.net
+
+----------------------
+
+net - 网络通信（不走http协议）
+
+TCP - 主要用于文件传送
+
+UDP - 主要用于视频直播
+
+----------------------
+
+OSI 七层参考模型
+    物理层 > 数据链路层 > 网络层(IP) > 传输层(tcp) > 会话层 > 表现出 > 应用层
+
+    现在使用的模型有五层模型
+    物理层 > 数据链路层 > 网络层(IP) > 传输层(tcp) >  应用层(http)
+
+----------------------
+
+数据通信
+    GET
+    POST
+        普通数据 - querystring
+        文件数据 - Buffer(二进制数据)= > 使用multiparty模块
+    POST文件处理(通过req.headers获取  WebKitFormBoundaryDzMIpMM3EnAXDTea)
+        ------WebKitFormBoundaryDzMIpMM3EnAXDTea Content-Disposition: form-data; name
+        111
+        ------WebKitFormBoundaryDzMIpMM3EnAXDTea Content-Disposition: form-data; password
+        222
+        ------WebKitFormBoundaryDzMIpMM3EnAXDTea Content-Disposition: form-data; name="f1"; filename=""
+        Content-Type: application/octet-stream
+        ------WebKitFormBoundaryDzMIpMM3EnAXDTea
+
+----------------------
+
+
+----------------------
+
+
+----------------------
+
+
+----------------------
