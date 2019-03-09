@@ -59,6 +59,12 @@ OSI 七层参考模型
     Ajax2.0->FormData
     WebSocket
 
+    ajax为什么不能跨域？
+
+    jsonp
+
+    ajax如何跨域 - origin、 access-control-allow-origin
+
 ----------------------
 
 数据库
