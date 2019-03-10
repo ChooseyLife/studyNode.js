@@ -1,0 +1,33 @@
+
+数据库
+    分类
+        文件型: 简单 -> access、sqlite
+        关系型：MySql、Oracle
+        分布式：MongoDB
+        NoSql：memcache、redis
+
+    安全性
+        注入
+
+    操作
+        管理性
+        增删改查
+    工具
+        navicat
+        phpmyadmin
+
+SQL - 4大语句
+    增
+        INSERT INTO <表>(字段...) VALUES(值,...)
+    删
+        DELETE
+    改
+        UPDATA
+    查
+        SEARCH
+----------------------
+
+框架
+    express
+    koa
+----------------------

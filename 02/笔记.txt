@@ -97,7 +97,7 @@ OSI 七层参考模型
 
                 sec-key -> http 头部获得
                 uuid => '258EAFA5-E914-47DA-95CA-C5AB0DC85B11'
-                base64(sha1(key + uuid)) => 返回res
+                base64(sha1(key + uuid)) => 返回res 
     ajax为什么不能跨域？
         浏览器的安全机制限制
     jsonp
@@ -109,9 +109,22 @@ OSI 七层参考模型
 ----------------------
 
 数据库
+    分类
+        文件型: 简单 -> access、sqlite
+        关系型：MySql、Oracle
+        分布式：MongoDB
+        NoSql：memcache、redis
+
+    安全性
+        注入
+
+    操作
+        管理性
+        增删改查
 
 ----------------------
 
 框架
-
+    express
+    koa
 ----------------------
